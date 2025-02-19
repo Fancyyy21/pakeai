@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <style>
         /* Reset dasar */
         * {
@@ -498,6 +501,78 @@
             font-size: 1em;
         }
 
+
+
+
+         /* Basic styles for the footer */
+        footer {
+            background-color: #004d00;
+            color: #fff;
+            padding: 40px 0;
+            font-family: sans-serif;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 960px; /* Adjust as needed */
+            margin: 0 auto; /* Center the content */
+            align-items: flex-start; /* Align items to the top */
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px; /* Add spacing between sections */
+        }
+
+        .footer-section:last-child {
+            margin-right: 0; /* Remove margin from the last section */
+        }
+
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-icons {
+            display: flex; /* Arrange icons horizontally */
+            margin-top: 10px;
+        }
+
+        .contact-icons a {
+            margin-right: 10px; /* Add spacing between icons */
+            font-size: 1.2em; /* Adjust icon size */
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #ccc; /* Add a line separator */
+            margin-top: 40px; /* Add spacing above the line */
+            padding-top: 20px; /* Add spacing below the line */
+            margin-right: 60px;
+            margin-left: 60px;
+            text-align: center;
+        }
+
+
+
+
+
+
+        
     </style>
 </head>
 <body>
@@ -683,6 +758,58 @@
     <!-- ... (bagian lain dari halaman) ... -->
 
 
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="./assets/img/footerlogo.png" alt="Logo" style="width: 50px; height: 50px;"> <span style="font-size: 20px; font-weight: bold;">ProfilDesaku</span>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                <p><svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 6.59009V22.5901L8 18.5901L16 22.5901L23 18.5901V2.59009L16 6.59009L8 2.59009L1 6.59009Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M16 6.59009V22.5901" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 2.59009V18.5901" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    </i> 2798 Meadow Lane, Napa, California- 94559</p>
+                <p><i class="fas fa-phone"></i> (808) 555-0111</p>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <div style="display: flex; gap: 50px;">
+                    <ul>
+                        <li><a href="#">Berita Desa</a></li>
+                        <li><a href="#">Sejarah Desa</a></li>
+                        <li><a href="#">Perangkat Desa</a></li>
+                        <li><a href="#">Peraturan Desa</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">Jumlah Penduduk</a></li>
+                        <li><a href="#">Jumlah Keluarga</a></li>
+                        <li><a href="#">Agama</a></li>
+                        <li><a href="#">Pekerjaan</a></li>
+                        <li><a href="#">Pendidikan</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Email</h3>
+                <p>firstname.lastname@mail.com</p>
+    
+                <h3>Contact Desa</h3>
+                <div class="contact-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fas fa-envelope"></i></a>
+                    <a href="#"><i class="fas fa-phone"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 ProfilDesa, All Rights Reserved.</p>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

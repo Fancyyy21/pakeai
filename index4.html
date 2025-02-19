@@ -1,168 +1,121 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nama Desa</title>
-    
-    <!-- CSS Stylesheets -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
-    
-    <!-- jQuery dan Slick JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-
+    <title>Footer Example</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        /* ... (Your existing styles) ... */
-
-        /* Statistik Penduduk Section */
-        .statistics-section {
-            background-color: #fff;
-            padding: 50px 112px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .statistics-title {
-            font-size: 2.5em;
-            color: #004d00;
-            margin-bottom: 30px; /* Increased margin for better spacing */
-        }
-
-        .statistics-chart {
-            display: flex;
-            justify-content: center; /* Center the chart */
-            margin-bottom: 30px;
-        }
-        .chart-container {
-            width: 700px; /* Adjust width as needed */
-            height: 300px; /* Adjust height as needed */
-        }
-
-        .legend {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px; /* Spacing between legend and chart */
-        }
-
-        .legend-item {
-            display: flex;
-            align-items: center;
-            margin: 0 10px; /* Spacing between legend items */
-        }
-
-        .legend-color {
-            width: 20px;
-            height: 20px;
-            margin-right: 5px;
-            border-radius: 3px; /* Rounded corners for legend color boxes */
-        }
-
-        .legend-laki {
-            background-color: #002602;
-        }
-
-        .legend-perempuan {
-            background-color: #009907;
-        }
-
-        .lihat-selengkapnya-statistik {
-            background-color: #006400;
+        /* Basic styles for the footer */
+        footer {
+            background-color: #004d00;
             color: #fff;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
+            padding: 40px 0;
+            font-family: sans-serif;
         }
 
-        /* Chart grid lines */
-        .chart-grid {
-            display: grid;
-            grid-template-columns: repeat(7, 1fr); /* 7 columns for years */
-            grid-template-rows: repeat(5, 1fr); /* 5 rows for values */
-            width: 100%;
-            height: 100%;
-            border-left: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            max-width: 960px; /* Adjust as needed */
+            margin: 0 auto; /* Center the content */
+            align-items: flex-start; /* Align items to the top */
         }
 
-        .chart-bar {
-            width: 40px; /* Adjust bar width */
-            margin: 0 auto; /* Center bars within grid cells */
-            background-color: #009907; /* Default color */
-            border-radius: 5px 5px 0 0; /* Rounded top corners */
+        .footer-section {
+            flex: 1;
+            margin-right: 20px; /* Add spacing between sections */
         }
 
-        .chart-bar.laki-laki {
-            background-color: #002602;
+        .footer-section:last-child {
+            margin-right: 0; /* Remove margin from the last section */
         }
 
-        /* Example bar heights (adjust as needed) */
-        .chart-bar[data-value="400"] { height: calc(400 / 800 * 100%); }
-        .chart-bar[data-value="500"] { height: calc(500 / 800 * 100%); }
-        /* ... add more data-value styles as needed ... */
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section li {
+            margin-bottom: 5px;
+        }
+
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .contact-icons {
+            display: flex; /* Arrange icons horizontally */
+            margin-top: 10px;
+        }
+
+        .contact-icons a {
+            margin-right: 10px; /* Add spacing between icons */
+            font-size: 1.2em; /* Adjust icon size */
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #ccc; /* Add a line separator */
+            margin-top: 40px; /* Add spacing above the line */
+            padding-top: 20px; /* Add spacing below the line */
+            margin-right: 60px;
+            margin-left: 92px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
 
-    <!-- ... (Your existing HTML) ... -->
-
-    <section class="statistics-section">
-        <h2 class="statistics-title">Statistik Penduduk</h2>
-        <div class="legend">
-            <div class="legend-item">
-                <div class="legend-color legend-laki"></div>
-                <span>Laki-laki</span>
-            </div>
-            <div class="legend-item">
-                <div class="legend-color legend-perempuan"></div>
-                <span>Perempuan</span>
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="./assets/img/logoddd.png" alt="Logo" style="width: 50px; height: 50px;"> <span style="font-size: 20px; font-weight: bold;">ProfilDesaku</span>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+            <p><i class="fas fa-map-marker-alt"></i> 2798 Meadow Lane, Napa, California- 94559</p>
+            <p><i class="fas fa-phone"></i> (808) 555-0111</p>
+        </div>
+        <div class="footer-section">
+            <h3>Links</h3>
+            <div style="display: flex; gap: 50px;">
+                <ul>
+                    <li><a href="#">Berita Desa</a></li>
+                    <li><a href="#">Sejarah Desa</a></li>
+                    <li><a href="#">Perangkat Desa</a></li>
+                    <li><a href="#">Peraturan Desa</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#">Jumlah Penduduk</a></li>
+                    <li><a href="#">Jumlah Keluarga</a></li>
+                    <li><a href="#">Agama</a></li>
+                    <li><a href="#">Pekerjaan</a></li>
+                    <li><a href="#">Pendidikan</a></li>
+                </ul>
             </div>
         </div>
-        <div class="statistics-chart">
-            <div class="chart-container">
-                <div class="chart-grid">
-                    <!-- 2018 -->
-                    <div><div class="chart-bar laki-laki" data-value="400"></div></div>
-                    <div><div class="chart-bar" data-value="420"></div></div>
+        <div class="footer-section">
+            <h3>Email</h3>
+            <p>firstname.lastname@mail.com</p>
 
-                    <!-- 2019 -->
-                    <div><div class="chart-bar laki-laki" data-value="400"></div></div>
-                    <div><div class="chart-bar" data-value="820"></div></div>
-
-                    <!-- 2020 -->
-                    <div><div class="chart-bar laki-laki" data-value="200"></div></div>
-                    <div><div class="chart-bar" data-value="120"></div></div>
-
-                    <!-- 2021 -->
-                    <div><div class="chart-bar laki-laki" data-value="150"></div></div>
-                    <div><div class="chart-bar" data-value="480"></div></div>
-
-                    <!-- 2022 -->
-                    <div><div class="chart-bar laki-laki" data-value="850"></div></div>
-                    <div><div class="chart-bar" data-value="200"></div></div>
-
-                    <!-- 2023 -->
-                    <div><div class="chart-bar laki-laki" data-value="750"></div></div>
-                    <div><div class="chart-bar" data-value="350"></div></div>
-
-                    <!-- 2024 -->
-                    <div><div class="chart-bar laki-laki" data-value="40"></div></div>
-                    <div><div class="chart-bar" data-value="150"></div></div>
-                </div>
+            <h3>Contact Desa</h3>
+            <div class="contact-icons">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fas fa-envelope"></i></a>
+                <a href="#"><i class="fas fa-phone"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
             </div>
         </div>
-        <button class="lihat-selengkapnya-statistik">Lihat Selengkapnya</button>
-    </section>
-
-    <!-- ... (Your existing scripts) ... -->
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 ProfilDesa, All Rights Reserved.</p>
+    </div>
+</footer>
 
 </body>
 </html>
