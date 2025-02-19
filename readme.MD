@@ -1,3 +1,14 @@
+```markdown
+# Tools Figma to Code - Contoh Manual dengan AI
+
+<span style="color:red; font-weight:bold;">! PERINGATAN !</span> File-file di repositori ini **BUKAN** hasil konversi dari tools v0.dev.  Kode-kode ini dibuat secara manual dengan bantuan AI Super AI dan ChatGPT sebagai demonstrasi dan contoh.  Mereka tidak merepresentasikan kemampuan penuh atau output yang dihasilkan oleh v0.dev.
+
+
+![Figma to Code - Contoh Manual](https://raw.githubusercontent.com/Fancyyy21/pakeai.github.io/refs/heads/main/v0.dev%20img/v1.png)
+```
+
+
+
 # Tools Figma to Code Menggunakan v0.dev
 
 ![Figma to Code](https://raw.githubusercontent.com/Fancyyy21/pakeai.github.io/main/v0.dev%20img/v1.png) <!-- Ganti dengan link gambar yang sesuai -->
