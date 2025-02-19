@@ -25,7 +25,6 @@
             box-sizing: border-box;
             font-family: "Outfit", serif;
             font-optical-sizing: auto;
-            /* font-weight: weight; */
             font-style: normal;
         }
 
@@ -40,7 +39,6 @@
             align-items: center;
             background: #fff;
             padding: 15px 50px;
-            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
             margin-left: 112px;
             margin-right: 112px;
         }
@@ -94,7 +92,7 @@
             font-size: 60px;
             margin-bottom: 15px;
             color: #333;
-            text-align: left; /* Align left */
+            text-align: left;
             font-weight: 500;
             line-height: normal;
         }
@@ -104,7 +102,7 @@
             color: #555;
             margin-bottom: 20px;
             line-height: 1.6;
-            text-align: left; /* Align left */
+            text-align: left;
             font-weight: 400;
             line-height: normal;
         }
@@ -140,8 +138,6 @@
 
         /* Slick Arrow Buttons */
         .slick-prev, .slick-next {
-            /* background: rgba(0, 0, 0, 0.5); */
-            /* color: white; */
             border: none;
             padding: 10px;
             padding-right: 30px;
@@ -163,13 +159,13 @@
 
         /* Informasi Desa Section */
         .info-section {
-            background-color: #004d00; /* Dark Green Background */
-            color: #fff; /* White Text */
+            background-color: #004d00;
+            color: #fff;
             padding: 50px;
-            text-align: left; /* Align left */
+            text-align: left;
         }
 
-        .info-container{
+        .info-container {
             margin-left: 112px;
             margin-right: 112px;
         }
@@ -190,17 +186,17 @@
         }
 
         .info-box {
-            background-color: #fff; /* White Box Background */
-            color: #000; /* Black Text */
+            background-color: #fff;
+            color: #000;
             padding: 30px;
             border-radius: 10px;
             width: 30%;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
 
         .info-box h2 {
-            color: #004d00; /* Dark Green Heading */
+            color: #004d00;
             font-size: 1.8em;
             margin-bottom: 15px;
         }
@@ -210,41 +206,36 @@
             line-height: 1.6;
         }
 
-
-
-         /* ... (CSS sebelumnya) ... */
-
         /* Berita Terkini Section */
         .news-section {
             background-color: #fff;
-            padding: 50px; /* Consistent padding with other sections */
+            padding: 50px;
             margin-left: 112px;
             margin-right: 112px;
         }
 
         .news-title {
             font-size: 52px;
-            color: #006400; /* Consistent green color */
+            color: #006400;
             margin-bottom: -35px;
             text-align: left;
             font-weight: 600;
         }
 
         .news-carousel {
-            display: flex; /* Enable horizontal scrolling */
-            overflow-x: auto; /* Hide overflowing content */
-            scroll-snap-type: x mandatory; /* Snap to each news item */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
         }
 
         .news-item {
-            scroll-snap-align: start; /* Align each item to the start */
-            flex: 0 0 calc(33.33% - 20px); /* Each item takes 1/3 of the width */
-            margin-right: 20px; /* Spacing between items */
-            background-color: #fff; /* Light background for news items */
+            scroll-snap-align: start;
+            flex: 0 0 calc(33.33% - 20px);
+            margin-right: 20px;
+            background-color: #fff;
             border-radius: 10px;
             padding: 20px;
-            /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow */
             text-align: left;
         }
 
@@ -270,7 +261,7 @@
 
         .news-navigation {
             display: flex;
-            justify-content: flex-end; /* Align buttons to the right */
+            justify-content: flex-end;
             margin-top: 20px;
             padding-left: 24px;
         }
@@ -292,9 +283,159 @@
             border-radius: 5px;
             cursor: pointer;
             font-size: 1em;
-            float: right; /* Align button to the right */
+            float: right;
             margin-top: 20px;
         }
+
+        /* Lokasi Desa Section */
+        .location-section {
+            background-color: #f9f9f9;
+            padding: 50px 162px;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .location-section h1 {
+            font-size: 3em;
+            color: #004d00;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .location-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .location-map {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .location-details {
+            flex: 1;
+            /* background-color: #fff; */
+            padding: 20px;
+            border-radius: 10px;
+            /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .location-details p {
+            margin-bottom: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .lihat-selengkapnya-lokasi { /* New class for location button */
+            background-color: #006400;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px; /* Add some top margin */
+        }
+
+
+         /* ... (CSS sebelumnya) ... */
+
+        /* Struktur Organisasi Section */
+        .organization-section {
+            background-color: #fff; /* White background for the section */
+            padding: 50px 162px;
+            margin-top: 20px;
+        }
+
+        .organization-container {
+            /* background-color: #004d00; Green background for the carousel container */
+            /* padding: 20px;
+            border-radius: 10px; */
+        }
+
+        .organization-title {
+            font-size: 60px;
+            font-weight: 500;
+            color: #000000; /* White title */
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .organization-carousel {
+            background-color: #004d00; /* Green background for the carousel container */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .slick-slide {
+            padding: 10px; /* Add padding around each slide */
+        }
+
+        .organization-member {
+            /* background-color: #fff; White card background */
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            transition: transform 0.3s ease; /* Smooth hover effect */
+        }
+
+        .organization-member:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .organization-member img {
+            width: 100%;
+            height: 432px; /* Adjust height as needed */
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .organization-member h3 {
+            font-size: 1.5em;
+            color: #004d00; /* Green name */
+            margin-bottom: 5px;
+        }
+
+        .organization-member p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .lihat-selengkapnya-organisasi {
+            background-color: #006400;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            float: right;
+            margin-top: 20px;
+        }
+
+        /* Slick arrow customization for organization carousel */
+        .organization-carousel .slick-prev,
+        .organization-carousel .slick-next {
+            width: 45px;
+            height: 45px;
+            background-color: rgba(0, 77, 0, 0.7); /* Slightly transparent green */
+            border-radius: 50%;
+            z-index: 1; /* Ensure arrows are above the carousel content */
+        }
+
+        .organization-carousel .slick-prev:before,
+        .organization-carousel .slick-next:before {
+            color: white; /* White arrow icons */
+            font-size: 20px;
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -352,54 +493,103 @@
         </div>
     </section>
 
-
-    <!-- ... (Kode sebelumnya) ... -->
-
     <!-- Berita Terkini Section -->
     <section class="news-section">
-    <div class="news-container">
-        <h2 class="news-title">Berita Terkini</h2>
-        <div class="news-navigation" style="gap: 25px;">
-            <svg class="prev-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="22.5" cy="22.5" r="22.5" fill="#003905"/>
-                <path d="M16.2635 21.15H33V23.85H16.2635L23.639 31.0912L21.6947 33L11 22.5L21.6947 12L23.639 13.9088L16.2635 21.15Z" fill="white"/>
+        <div class="news-container">
+            <h2 class="news-title">Berita Terkini</h2>
+            <div class="news-navigation" style="gap: 25px;">
+                <svg class="prev-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="22.5" fill="#003905"/>
+                    <path d="M16.2635 21.15H33V23.85H16.2635L23.639 31.0912L21.6947 33L11 22.5L21.6947 12L23.639 13.9088L16.2635 21.15Z" fill="white"/>
                 </svg>
                 
-            <svg class="next-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="22.5" cy="22.5" r="22.5" transform="rotate(-180 22.5 22.5)" fill="#003905"/>
-                <path d="M28.7365 23.85H12V21.15H28.7365L21.361 13.9088L23.3053 12L34 22.5L23.3053 33L21.361 31.0912L28.7365 23.85Z" fill="white"/>
+                <svg class="next-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="22.5" cy="22.5" r="22.5" transform="rotate(-180 22.5 22.5)" fill="#003905"/>
+                    <path d="M28.7365 23.85H12V21.15H28.7365L21.361 13.9088L23.3053 12L34 22.5L23.3053 33L21.361 31.0912L28.7365 23.85Z" fill="white"/>
                 </svg>
+            </div>
+            <div class="news-carousel">
+                <div class="news-item">
+                    <img src="./assets/img/ber1.png" alt="Berita 1">
+                    <h3>Kebakaran di Rumah Kosong Bandung</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="news-date">10 Oktober 2024</p>
+                </div>
+                <div class="news-item">
+                    <img src="./assets/img/ber2.png" alt="Berita 2">
+                    <h3>Angin Tornado Menghancurkan Rumah</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <p class="news-date">10 Oktober 2024</p>
+                </div>
+                <div class="news-item">
+                    <img src="./assets/img/ber3.png" alt="Berita 3">
+                    <h3>Pohon Tumbang Memakan Korban</h3>
+                    <p>Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="news-date">10 Oktober 2024</p>
+                </div>
+                <div class="news-item">
+                    <img src="./assets/img/ber4.png" alt="Berita 4">
+                    <h3>Pohon Tumbang Memakan Korban</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="news-date">10 Oktober 2024</p>
+                </div>
+            </div>
+            
+            <div href="#" class="lihat-selengkapnya">Lihat Selengkapnya</div>
         </div>
-        <div class="news-carousel">
-            <div class="news-item">
-                <img src="./assets/img/ber1.png" alt="Berita 1">
-                <h3>Kebakaran di Rumah Kosong Bandung</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p class="news-date">10 Oktober 2024</p>
+    </section>
+
+    <!-- Lokasi Desa Section -->
+    <section class="location-section">
+        <h1 style="font-weight: 500; font-size: 60; padding-bottom: 62px;">Lokasi Desa</h1>
+        <div class="location-content" style="gap: 93px;">
+            <div class="location-map">
+                <img src="./assets/img/maps.png" alt="Map" style="width: 100%; border-radius: 10px;">
             </div>
-            <div class="news-item">
-                <img src="./assets/img/ber2.png" alt="Berita 2">
-                <h3>Angin Tornado Menghancurkan Rumah</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <p class="news-date">10 Oktober 2024</p>
-            </div>
-            <div class="news-item">
-                <img src="./assets/img/ber3.png" alt="Berita 3">
-                <h3>Pohon Tumbang Memakan Korban</h3>
-                <p>Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p class="news-date">10 Oktober 2024</p>
-            </div>
-            <div class="news-item">
-                <img src="./assets/img/ber4.png" alt="Berita 4">
-                <h3>Pohon Tumbang Memakan Korban</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
-                <p class="news-date">10 Oktober 2024</p>
+            <div class="location-details" >
+                <p>Koordinat: 6°13'17.3"S 106°52'17.8"E</p>
+                <p>Negara: Indonesia</p>
+                <p>Provinsi: DKI Jakarta</p>
+                <p>Kabupaten: Jakarta Pusat</p>
+                <p>Kecamatan: Kemayoran</p>
+                <p>Desa/Kelurahan: Desa Adem Sari</p>
+                <button class="lihat-selengkapnya-lokasi">Lihat Selengkapnya</button>
             </div>
         </div>
-        
-        <a href="#" class="lihat-selengkapnya">Lihat Selengkapnya</a>
-    </div>
-</section>
+    </section>
+
+
+     <!-- ... (bagian lain dari halaman) ... -->
+
+     <section class="organization-section">
+        <div class="organization-container">
+            <h2 class="organization-title">Struktur Organisasi Dan Tata Kerja</h2>
+            <div class="organization-carousel">
+                <div class="organization-member">
+                    <img src="./assets/img/a1.png" alt="Adam">
+                </div>
+                <div class="organization-member">
+                    <img src="./assets/img/a2.png" alt="Indah">
+                </div>
+                <div class="organization-member">
+                    <img src="./assets/img/a3.png" alt="Siti">
+                    
+                </div>
+                <div class="organization-member">
+                    <img src="./assets/img/a4.png" alt="Wahyu">
+                </div>
+                <div class="organization-member">
+                    <img src="./assets/img/a5.png" alt="Anggota 5">  <!-- Gambar baru -->
+                </div>
+                <div class="organization-member">
+                    <img src="./assets/img/a6.png" alt="Anggota 6">  <!-- Gambar baru -->
+                </div>
+                <!-- Tambahkan anggota lain di sini -->
+            </div>
+            <button class="lihat-selengkapnya-organisasi">Lihat Selengkapnya</button>
+        </div>
+    </section>
+
 
     <!-- Slick Carousel Initialization -->
     <script>
@@ -412,40 +602,77 @@
                 prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
                 nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
             });
+
+            $('.news-carousel').slick({
+                dots: false,
+                arrows: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                prevArrow: $('.prev-button'),
+                nextArrow: $('.next-button'),
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
         });
 
 
 
         $(document).ready(function(){
-        $('.news-carousel').slick({
-            dots: false,
-            arrows: true,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            prevArrow: $('.prev-button'),
-            nextArrow: $('.next-button'),
-            responsive: [
-                {
-                    breakpoint: 1024,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2,
-                        infinite: true,
-                        dots: true
+            // ... (kode slick lainnya) ...
+
+            $('.organization-carousel').slick({
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4, /* Menampilkan 4 slide sekaligus */
+                slidesToScroll: 4,
+                prevArrow: '<button type="button" class="slick-prev"><</button>',
+                nextArrow: '<button type="button" class="slick-next">></button>',
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
                     }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+                ]
+            });
         });
-    });
     </script>
 
 </body>

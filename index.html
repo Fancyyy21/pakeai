@@ -358,7 +358,7 @@
 
         .organization-title {
             font-size: 60px;
-            font-weight: 500;
+            font-weight: 600;
             color: #000000; /* White title */
             text-align: left;
             margin-bottom: 30px;
@@ -433,6 +433,71 @@
             color: white; /* White arrow icons */
             font-size: 20px;
         }
+
+
+
+/* ... (CSS sebelumnya) ... */
+
+        /* Statistik Penduduk Section */
+        .statistics-section {
+            background-color: #fff;
+            padding: 50px 112px; /* Menyesuaikan padding */
+            text-align: center; /* Teks di tengah */
+            margin-top: 20px;
+        }
+
+        .statistics-title {
+            font-size: 2.5em;
+            color: #004d00;
+            margin-bottom: 30px; /* Memberi jarak antara judul dan grafik */
+            font-weight: 600; /* Font lebih tebal */
+        }
+
+        .statistics-chart-container {
+            display: flex;
+            justify-content: center; /* Grafik di tengah */
+            margin-bottom: 30px; /* Jarak antara grafik dan tombol */
+        }
+        .chart-container {
+            width: 700px;
+            height: 300px;
+        }
+
+        .statistics-chart { /* Style untuk grafik */
+            width: 100%;
+            max-width: 800px; /* Batas lebar maksimum grafik */
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 0 10px; /* Jarak antar item legenda */
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            border-radius: 3px;
+        }
+
+        .lihat-selengkapnya-statistik {
+            background-color: #006400;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
     </style>
 </head>
 <body>
@@ -538,7 +603,7 @@
 
     <!-- Lokasi Desa Section -->
     <section class="location-section">
-        <h1 style="font-weight: 500; font-size: 60; padding-bottom: 62px;">Lokasi Desa</h1>
+        <h1 style="font-weight: 600; font-size: 60; padding-bottom: 62px;">Lokasi Desa</h1>
         <div class="location-content" style="gap: 93px;">
             <div class="location-map">
                 <img src="./assets/img/maps.png" alt="Map" style="width: 100%; border-radius: 10px;">
@@ -588,6 +653,39 @@
     </section>
 
 
+    
+
+<!-- ... (bagian lain dari halaman) ... -->
+
+    <section class="statistics-section">
+        <h2 class="statistics-title">Statistik Penduduk</h2>
+
+        <!-- <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #003014;"></div>
+                <span>Laki-laki</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: #228B22;"></div>
+                <span>Perempuan</span>
+            </div>
+        </div> -->
+        
+        <div class="statistics-chart-container">
+            <div class="chart-container">
+                <canvas id="populationChart"></canvas>
+            </div>
+        </div>
+
+        <button class="lihat-selengkapnya-statistik">Lihat Selengkapnya</button>
+    </section>
+
+    <!-- ... (bagian lain dari halaman) ... -->
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <!-- Slick Carousel Initialization -->
     <script>
         $(document).ready(function(){
@@ -670,6 +768,59 @@
                 ]
             });
         });
+
+
+
+
+
+// Data untuk grafik
+const data = {
+            labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+            datasets: [
+                {
+                    label: 'Laki-laki',
+                    data: [400, 400, 200, 150, 850, 750, 50],
+                    backgroundColor: '#003014', // Warna hijau tua
+                    
+                },
+                {
+                    label: 'Perempuan',
+                    data: [420, 820, 120, 450, 200, 350, 150],
+                    backgroundColor: '#228B22', // Warna hijau muda
+                    
+                }
+            ]
+        };
+
+        // Konfigurasi grafik
+        const config = {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: '#e0e0e0' // Warna garis grid
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: '#e0e0e0' // Warna garis grid
+                        }
+                    }
+                }
+            }
+        };
+
+        // Membuat grafik
+        const populationChart = new Chart(
+            document.getElementById('populationChart'),
+            config
+        );
+
+
+
     </script>
 
 </body>
