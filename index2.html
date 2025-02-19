@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nama Desa</title>
+    
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    
+    <!-- jQuery dan Slick JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Outfit", serif;
+            font-optical-sizing: auto;
+            /* font-weight: weight; */
+            font-style: normal;
+        }
+
+        body {
+            background-color: #fff;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+            padding: 15px 50px;
+            /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+            margin-left: 112px;
+            margin-right: 112px;
+        }
+
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #003905;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+            margin: auto;
+            margin-left: 112px;
+            margin-right: 112px;
+        }
+
+        .hero-content {
+            max-width: 542px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: left; /* Align left */
+            font-weight: 500;
+            line-height: normal;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            text-align: left; /* Align left */
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .cta-button {
+            background: #006400;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .cta-button:hover {
+            background: #004d00;
+        }
+
+        /* Hero Carousel */
+        .hero-carousel {
+            width: 560px;
+            max-width: 100%;
+            margin-left: 22px;
+        }
+
+        .hero-carousel img {
+            width: 100%;
+            height: 478px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        /* Slick Arrow Buttons */
+        .slick-prev, .slick-next {
+            /* background: rgba(0, 0, 0, 0.5); */
+            /* color: white; */
+            border: none;
+            padding: 10px;
+            padding-right: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            font-size: 18px;
+        }
+
+        .slick-prev {
+            left: 10px;
+        }
+
+        .slick-next {
+            right: 10px;
+        }
+
+        /* Informasi Desa Section */
+        .info-section {
+            background-color: #004d00; /* Dark Green Background */
+            color: #fff; /* White Text */
+            padding: 50px;
+            text-align: left; /* Align left */
+        }
+
+        .info-container{
+            margin-left: 112px;
+            margin-right: 112px;
+        }
+
+        .info-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .info-section .subtitle {
+            font-size: 1.2em;
+            margin-bottom: 50px;
+        }
+
+        .info-boxes {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .info-box {
+            background-color: #fff; /* White Box Background */
+            color: #000; /* Black Text */
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle Shadow */
+            text-align: left;
+        }
+
+        .info-box h2 {
+            color: #004d00; /* Dark Green Heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .info-box p {
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+
+
+         /* ... (CSS sebelumnya) ... */
+
+        /* Berita Terkini Section */
+        .news-section {
+            background-color: #fff;
+            padding: 50px; /* Consistent padding with other sections */
+            margin-left: 112px;
+            margin-right: 112px;
+        }
+
+        .news-title {
+            font-size: 52px;
+            color: #006400; /* Consistent green color */
+            margin-bottom: -35px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .news-carousel {
+            display: flex; /* Enable horizontal scrolling */
+            overflow-x: auto; /* Hide overflowing content */
+            scroll-snap-type: x mandatory; /* Snap to each news item */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
+        }
+
+        .news-item {
+            scroll-snap-align: start; /* Align each item to the start */
+            flex: 0 0 calc(33.33% - 20px); /* Each item takes 1/3 of the width */
+            margin-right: 20px; /* Spacing between items */
+            background-color: #fff; /* Light background for news items */
+            border-radius: 10px;
+            padding: 20px;
+            /* box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); Subtle shadow */
+            text-align: left;
+        }
+
+        .news-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .news-item h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .news-item p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .news-navigation {
+            display: flex;
+            justify-content: flex-end; /* Align buttons to the right */
+            margin-top: 20px;
+            padding-left: 24px;
+        }
+
+        .news-navigation button {
+            background-color: transparent;
+            border: none;
+            font-size: 1.2em;
+            color: #006400;
+            cursor: pointer;
+            margin: 0 5px;
+        }
+
+        .lihat-selengkapnya {
+            background-color: #006400;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            float: right; /* Align button to the right */
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./assets/img/logoddd.png" alt="Logo"> <a style="font-size: 28px; font-weight: 500;">Nama Desa</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Berita Desa</a></li>
+                <li><a href="#">Sejarah Desa</a></li>
+                <li><a href="#">Perangkat Desa</a></li>
+                <li><a href="#">Data Demografi</a></li>
+                <li><a href="#">Peraturan Desa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Jelajahi Desa-Desa di Indonesia dengan Mudah</h1>
+            <p>Temukan kekayaan budaya, tradisi unik, dan informasi penting tentang setiap desa di Indonesia. Telusuri profil mendalam dan temukan keindahan tersembunyi dari negeri kita.</p>
+            <button class="cta-button">Jelajahi Sekarang!</button>
+        </div>
+        <div class="hero-carousel">
+            <div><img src="./assets/img/car1.png" alt="Image 1"></div>
+            <div><img src="./assets/img/car2.png" alt="Image 2"></div>
+            <div><img src="./assets/img/car3.png" alt="Image 3"></div>
+        </div>
+    </section>
+
+    <!-- Profil Desa Section -->
+    <section class="info-section">
+        <div class="info-container">
+            <h1 style="font-weight: 500;">Informasi Desa</h1>
+            <p class="subtitle">Temukan informasi desa dari Sabang sampai Merauke dalam satu platform digital yang mudah digunakan</p>
+            <div class="info-boxes">
+                <div class="info-box">
+                    <h2>Tentang</h2>
+                    <p>ProfilDesa adalah aplikasi yang menyediakan informasi lengkap tentang desa-desa di Indonesia untuk mendukung perencanaan dan pembangunan.</p>
+                </div>
+                <div class="info-box">
+                    <h2>Visi</h2>
+                    <p>Menjadi platform utama yang menyediakan informasi desa di Indonesia untuk pembangunan berkelanjutan dan transparansi data.</p>
+                </div>
+                <div class="info-box">
+                    <h2>Misi</h2>
+                    <p>Menyediakan data desa yang lengkap, mendukung pembangunan lokal, memfasilitasi kolaborasi, dan meningkatkan akses informasi secara transparan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ... (Kode sebelumnya) ... -->
+
+    <!-- Berita Terkini Section -->
+    <section class="news-section">
+    <div class="news-container">
+        <h2 class="news-title">Berita Terkini</h2>
+        <div class="news-navigation" style="gap: 25px;">
+            <svg class="prev-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22.5" cy="22.5" r="22.5" fill="#003905"/>
+                <path d="M16.2635 21.15H33V23.85H16.2635L23.639 31.0912L21.6947 33L11 22.5L21.6947 12L23.639 13.9088L16.2635 21.15Z" fill="white"/>
+                </svg>
+                
+            <svg class="next-button" width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="22.5" cy="22.5" r="22.5" transform="rotate(-180 22.5 22.5)" fill="#003905"/>
+                <path d="M28.7365 23.85H12V21.15H28.7365L21.361 13.9088L23.3053 12L34 22.5L23.3053 33L21.361 31.0912L28.7365 23.85Z" fill="white"/>
+                </svg>
+        </div>
+        <div class="news-carousel">
+            <div class="news-item">
+                <img src="./assets/img/ber1.png" alt="Berita 1">
+                <h3>Kebakaran di Rumah Kosong Bandung</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p class="news-date">10 Oktober 2024</p>
+            </div>
+            <div class="news-item">
+                <img src="./assets/img/ber2.png" alt="Berita 2">
+                <h3>Angin Tornado Menghancurkan Rumah</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p class="news-date">10 Oktober 2024</p>
+            </div>
+            <div class="news-item">
+                <img src="./assets/img/ber3.png" alt="Berita 3">
+                <h3>Pohon Tumbang Memakan Korban</h3>
+                <p>Lorem ipsum dolor sit amet, dolor sit amet dolor sit amet sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p class="news-date">10 Oktober 2024</p>
+            </div>
+            <div class="news-item">
+                <img src="./assets/img/ber4.png" alt="Berita 4">
+                <h3>Pohon Tumbang Memakan Korban</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <p class="news-date">10 Oktober 2024</p>
+            </div>
+        </div>
+        
+        <a href="#" class="lihat-selengkapnya">Lihat Selengkapnya</a>
+    </div>
+</section>
+
+    <!-- Slick Carousel Initialization -->
+    <script>
+        $(document).ready(function(){
+            $('.hero-carousel').slick({
+                dots: false,
+                arrows: true,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                prevArrow: '<button type="button" class="slick-prev">&#10094;</button>',
+                nextArrow: '<button type="button" class="slick-next">&#10095;</button>'
+            });
+        });
+
+
+
+        $(document).ready(function(){
+        $('.news-carousel').slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+            prevArrow: $('.prev-button'),
+            nextArrow: $('.next-button'),
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+    </script>
+
+</body>
+</html>
